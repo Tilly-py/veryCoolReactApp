@@ -1,0 +1,21 @@
+.add-movie {
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin-top: 2%;
+  padding: 5% 5%;
+  background-color: var(--accent);
+  color: var(--bg);
+  border: var(--accent-border);
+  box-shadow: inset 2px -2px 0 var(--accent-shadow);
+}
