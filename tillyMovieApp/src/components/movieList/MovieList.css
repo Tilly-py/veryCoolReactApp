@@ -1,16 +1,16 @@
-.movie-list{
-    list-style: none;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    flex-direction: column;
-    border: 2px solid #ccc;
-    width: 50%;
-    margin: 0 auto;
+.movie-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
 }
-img{
-    width: 5%;
+img {
+  width: 5%;
 }
-li{
-    border: 1px solid rgba(255, 255, 255, 0.3);
+li {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5%;
 }

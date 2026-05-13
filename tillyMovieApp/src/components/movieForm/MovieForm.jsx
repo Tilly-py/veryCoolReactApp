@@ -1,15 +1,41 @@
 import './MovieForm.css';
+import { useState } from 'react';
 
-const MovieForm = () => {
+const formElements = {
+  title: '',
+  rating: '',
+};
+const MovieForm = (onSubmit) => {
+  const [inputs, setInputs] = useState(formElements);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit({
+      title: inputs.title,
+      rating: inputs.rating,
+    });
+  };
   return (
     <div className="add-movie">
       <h2>Add Movie</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="title">Titel</label>
-          <input type="text" id="title" name="title" />
+          <input
+            type="text"
+            id="title"
+            name="title"
+            value={inputs.title}
+            onChange={handleInputChange}
+          />
           <label htmlFor="rating">Rating</label>
-          <select id="rating" name="rating">
+          <select id="rating" name="rating" value={inputs.rating} onChange={handleInputChange}>
             <option value="">Ge filmen ett betyg</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -17,9 +43,7 @@ const MovieForm = () => {
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <button type="submit">
-            Lägg till film
-          </button>
+          <button type="submit">Lägg till film</button>
         </div>
       </form>
     </div>
