@@ -5,8 +5,9 @@ const formElements = {
   title: '',
   rating: '',
 };
-const MovieForm = (onSubmit) => {
+const MovieForm = ({ onSubmit }) => {
   const [inputs, setInputs] = useState(formElements);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setInputs({
@@ -14,13 +15,18 @@ const MovieForm = (onSubmit) => {
       [name]: value,
     });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({
+
+    const newMovie = {
       title: inputs.title,
       rating: inputs.rating,
-    });
+    };
+    onSubmit(newMovie);
+    setInputs(formElements);
   };
+
   return (
     <div className="add-movie">
       <h2>Add Movie</h2>
@@ -43,7 +49,7 @@ const MovieForm = (onSubmit) => {
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <button type="submit">Lägg till film</button>
+          <button type="submit">Lägg till</button>
         </div>
       </form>
     </div>

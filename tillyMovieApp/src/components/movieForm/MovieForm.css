@@ -10,12 +10,35 @@
   flex-direction: column;
   align-items: center;
 }
-
+#title,
+#rating {
+  width: 100%;
+  height: 5vh;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-style: groove;
+  border-radius: 10px;
+  align-items: center;
+  background-color: rgba(2, 2, 2, 0.05);
+  text-align: center;
+  font-family: var(--heading);
+  border-radius: 4px;
+  font-weight: 700;
+  color: var(--text-h);
+}
 button {
-  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  margin-top: 5%;
   padding: 5% 5%;
   background-color: var(--accent);
-  color: var(--bg);
   border: var(--accent-border);
   box-shadow: inset 2px -2px 0 var(--accent-shadow);
+  border-radius: 10px;
+  height: 10px;
+  cursor: pointer;
+  color: var(--text-h);
+  font-family: var(--heading);
+  font-weight: 700;
 }

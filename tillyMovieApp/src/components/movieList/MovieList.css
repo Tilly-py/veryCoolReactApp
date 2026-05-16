@@ -10,7 +10,30 @@
 img {
   width: 5%;
 }
-li {
+.movie-list-item {
+  padding: 0 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 5%;
+  border-style: groove;
+  border-radius: 10px;
+  height: 10vh;
+  margin: 10px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.movie-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 10px var(--accent);
+}
+.movie-content {
+  display: flex;
+  flex-direction: start;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+.movie-images {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+  margin-left: auto;
 }

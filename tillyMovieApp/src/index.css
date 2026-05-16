@@ -29,11 +29,12 @@
   }
 }
 
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
     --text-h: #f3f4f6;
-    --bg: #16171d;
+    --bg: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 92, 246, 0.25), transparent 70%), #000000;
     --border: #2e303a;
     --code-bg: #1f2028;
     --accent: #c084fc;
@@ -61,6 +62,7 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+
 }
 
 h1,
