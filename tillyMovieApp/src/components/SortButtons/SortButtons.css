@@ -1,0 +1,11 @@
+.sort-buttons{
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sort-buttons > button{
+    padding: 20px;
+    width: 20%;
+    margin-bottom: 3%;
+}
