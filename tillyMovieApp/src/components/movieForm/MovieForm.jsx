@@ -8,6 +8,13 @@ const formElements = {
 const MovieForm = ({ onSubmit }) => {
   const [inputs, setInputs] = useState(formElements);
 
+  const handleValidation = () => {
+    if (inputs.title === '' || inputs.rating === '') {
+      alert('Vänligen fyll i alla fält');
+      return false;
+    }
+    return true;
+  };
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setInputs({
@@ -19,6 +26,10 @@ const MovieForm = ({ onSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!handleValidation()) {
+      return;
+    }
+
     const newMovie = {
       title: inputs.title,
       rating: inputs.rating,
@@ -29,7 +40,7 @@ const MovieForm = ({ onSubmit }) => {
 
   return (
     <div className="add-movie">
-      <h2>Add Movie</h2>
+      <h2>Lägg till en film i listan</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="title">Titel</label>

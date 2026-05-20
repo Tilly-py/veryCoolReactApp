@@ -7,18 +7,17 @@
   width: 50%;
   margin: 0 auto;
 }
-img {
-  width: 5%;
-}
+
 .movie-list-item {
-  padding: 0 20px;
+  padding: 20px 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-style: groove;
   border-radius: 10px;
-  height: 10vh;
+  height: 8vh;
   margin: 10px;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 18px 36px -18px var(--accent-border);
 }
 .movie-list-item:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -38,4 +37,11 @@ img {
   margin-left: auto;
 }
 
-
+.movie-images img {
+  width: 10%;
+  height: 10%;
+  object-fit: contain;
+}
+.remove-button {
+  cursor: pointer;
+}

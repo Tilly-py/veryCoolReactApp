@@ -24,6 +24,7 @@
   border-radius: 4px;
   font-weight: 700;
   color: var(--text-h);
+  box-shadow: 0px 18px 36px -18px var(--accent-border);
 }
 button {
   display: flex;
@@ -33,12 +34,18 @@ button {
   margin-top: 5%;
   padding: 5% 5%;
   background-color: var(--accent);
-  border: var(--accent-border);
-  box-shadow: inset 2px -2px 0 var(--accent-shadow);
+  border: solid px var(--accent-border);
+  box-shadow: 0px 18px 36px -18px var(--accent-border);
   border-radius: 10px;
   height: 10px;
   cursor: pointer;
   color: var(--text-h);
   font-family: var(--heading);
   font-weight: 700;
+}
+button:hover {
+  background-color: var(--accent);
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }

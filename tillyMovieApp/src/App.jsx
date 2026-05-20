@@ -8,6 +8,11 @@ function App() {
   const addMovie = (movie) => {
     setMovies([...movies, movie]);
   };
+
+  const removeMovie = (titleToRemove) => {
+    setMovies(movies.filter((movie) => movie.title !== titleToRemove));
+  };
+
   const [sortBy, setSortBy] = useState('');
   const sortMovies = [...movies].sort((a, b) => {
     if (sortBy === 'title') {
@@ -26,7 +31,7 @@ function App() {
           <h1>Welcome to Tilly Movie Site</h1>
           <MovieForm onSubmit={addMovie} />
           <SortButtons onSortBy={setSortBy} />
-          <MovieList movies={sortMovies} />
+          <MovieList movies={sortMovies} onRemoveMovie={removeMovie} />
         </div>
       </main>
     </>
